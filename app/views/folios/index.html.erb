@@ -1,0 +1,39 @@
+<div class="thumbnail-container">
+
+    <!-- Page Header -->
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- <h1 class="page-header">My projects
+                <small>Secondary Text</small>
+            </h1> -->
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Projects Row -->
+    <% @folios.each_slice(3) do |three_folios| %>
+    <div class="row">
+      <% three_folios.each_with_index do |folio, index| %>
+      <div class="col-md-4 portfolio-item">
+          <%= link_to folio_path(folio) do %>
+            <% if !folio.image_url.blank?%>
+              <%= image_tag folio.figure.url(), :class => "img-responsive image_thumbnail_size img-rounded"  %>
+
+            <% else %>
+              <%= image_tag folio.figure.url(),  :class => "img-responsive image_thumbnail_size img-rounded"  %>
+            <% end %>
+          <% end %>
+          <h4>
+              <%= link_to  folio.title, folio_path(folio)  %>
+          </h4>
+
+
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+    <!-- /.row -->
+
+
+
+</div>

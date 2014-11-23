@@ -1,0 +1,30 @@
+<div class="form-group has-feedback <%= validation_state(@folio, :title) %>">
+  <%= f.label :title, "Title", class: "col-sm-2 control-label" %>
+  <div class="col-sm-10">
+    <%= f.text_field :title, autofocus: true, class: "form-control" %>
+    <span class="glyphicon <%= validation_state_feedback(@folio, :title) %> form-control-feedback"></span>
+    <span class="help-block"><%= attribute_error_message(@folio, :title) %></span>
+  </div>
+</div>
+
+<div class="form-group has-feedback <%= validation_state(@folio, :description) %>">
+  <%= f.label :description, "Description", class: "col-sm-2 control-label" %>
+  <div class="col-sm-10">
+    <%= f.text_area :description, autofocus: true, class: "form-control" %>
+    <span class="glyphicon <%= validation_state_feedback(@folio, :description) %> form-control-feedback"></span>
+    <span class="help-block"><%= attribute_error_message(@folio, :description) %></span>
+  </div>
+</div>
+
+<div class="form-group has-feedback <%= validation_state(@folio, :figure) %>">
+  <%= f.label :figure, "Thumbnail image", class: "col-sm-2 control-label" %>
+  <div class="col-sm-10">
+
+    <%= f.file_field :figure , autofocus: true, class: "form-control"  %>
+
+    <span class="glyphicon <%= validation_state_feedback(@folio, :figure) %> form-control-feedback"></span>
+    <span class="help-block"><%= attribute_error_message(@folio, :figure) %></span>
+  </div>
+  <%= image_tag @folio.figure.url(:thumb) %>
+</div>
+

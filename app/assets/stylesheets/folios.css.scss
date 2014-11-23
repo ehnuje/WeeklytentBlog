@@ -1,0 +1,45 @@
+// Place all the styles related to the Folios controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.image_thumbnail_size
+{
+  max-width: 360px;
+}
+.thumbnail-container
+{
+  margin-top: 30px;
+}
+
+.wrapper {
+    position: relative;
+    padding: 0;
+    width:100px;
+    display:block;
+}
+
+.text {
+    position: absolute;
+    top: 0;
+    color:#f00;
+    background-color:rgba(255,255,255,0.8);
+    width: 100px;
+    height: 100px;
+    line-height:100px;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.text:hover {
+    opacity:1;
+}
+
+
+img {
+    z-index:1;
+}
+

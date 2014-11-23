@@ -1,4 +1,4 @@
-WeeklytentBlog
-==============
+RatingFolio
+===========
 
-Weeklytent Blog
+It just a simple portfolio web site, but...

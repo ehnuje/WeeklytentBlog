@@ -1,0 +1,43 @@
+<div class="container">
+
+  <!-- Page Header -->
+
+
+  <h1 class="pull-left">Projects list </h1>
+  <div class="pull-right" style="margin-top: 40px;">
+    <%= link_to "New", new_admin_folio_path, class: "btn btn-default " %>
+  </div>
+  <div class="clearfix margin-bot-40"></div>
+
+  <!-- Projects Row -->
+  <div class="table-responsive">
+
+    <table class="table table-striped">
+      <tr>
+        <th>
+          Folio title
+        </th>
+        <th>
+          Created At
+        </th>
+        <th>
+        </th>
+      </tr>
+      <% @folios.each do |folio| %>
+      <tr>
+          <td> <%= folio.title %> </td>
+          <td> <%= folio.created_at %> </td>
+          <td>
+            <%= link_to "Modify", edit_admin_folio_path(folio), class: "btn btn-default btn-xs" %>
+            <%= link_to "Delete", admin_folio_path(folio), method: :delete, data: { confirm: "Really?" }, class: "btn btn-danger btn-xs" %>
+          </td>
+
+      </tr>
+      <% end %>
+    </table>
+  </div>
+  <!-- /.row -->
+
+
+
+</div>
