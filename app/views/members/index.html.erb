@@ -11,16 +11,29 @@
     <!-- /.row -->
 
     <!-- Members Row -->
+     <% @members.each_slice(3) do |three_members| %>
     <div class="row">
-      <% @members.each do |member| %>
-        <div class="col-md-4 portfolio-item text-center">
+      <% three_members.each_with_index do |member, index| %>
+      <div class="col-md-4 ">
           <%= link_to member_path(member) do %>
-            <%= image_tag member.image_url, :class => "img-responsive aligncenter img-rounded" %>
-            <h4><%= member.name %></h4>
+            <% if !member.image_url.blank?%>
+              <%= image_tag member.profile_img.url(), :class => "img-responsive image_thumbnail_size img-rounded"  %>
+
+            <% else %>
+              <%= image_tag member.profile_img.url(),  :class => "img-responsive image_thumbnail_size img-rounded"  %>
+            <% end %>
           <% end %>
-        </div>
+          <h4>
+              <%= link_to  member.name, member_path(member)  %>
+          </h4>
+
+
+      </div>
       <% end %>
     </div>
+    <% end %>
+
+
     <!-- /.row -->
 
 </div>
