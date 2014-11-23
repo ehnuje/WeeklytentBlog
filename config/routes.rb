@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   root 'folios#index'
   resources :folios, only: [:show, :index]
+  resources :members, only: [:show, :index]
+
   namespace :admin do
     resources :folios, except: [:show]
+    resources :members, except: [:show]
   end
 end

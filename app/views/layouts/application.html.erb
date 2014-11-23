@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RatingFolio</title>
+  <title>Weeklytent</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -20,7 +20,9 @@
         </button>
         <div class="navbar-brand navbar-brand-center  ">
           <div id="nav-title">
-            <%= link_to  "WeeklyTent", root_path %>
+
+            <%= link_to  "Weekly Tent", root_path %>
+
           </div>
         </div>
       </div>
@@ -31,7 +33,9 @@
             <%= link_to "Projects", folios_path %>
           </li>
           <li>
-            <%= link_to "About us", folios_path %>
+
+            <%= link_to "Members", members_path %>
+
           </li>
         </ul>
       </div>

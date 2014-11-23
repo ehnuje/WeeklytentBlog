@@ -1,0 +1,26 @@
+<div class="thumbnail-container">
+
+    <!-- Page Header -->
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- <h1 class="page-header">My projects
+                <small>Secondary Text</small>
+            </h1> -->
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Members Row -->
+    <div class="row">
+      <% @members.each do |member| %>
+        <div class="col-md-4 portfolio-item text-center">
+          <%= link_to member_path(member) do %>
+            <%= image_tag member.image_url, :class => "img-responsive aligncenter img-rounded" %>
+            <h4><%= member.name %></h4>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <!-- /.row -->
+
+</div>
