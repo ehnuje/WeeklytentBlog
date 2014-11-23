@@ -19,7 +19,9 @@
       </button>
       <div class="text-center">
         <div id="nav-title">
-          <%= image_tag "logo.png", :class => "img-responsive aligncenter img-rounded" %>
+          <%= link_to folios_path do %>
+            <%= image_tag "logo.png", :class => "img-responsive aligncenter img-rounded" %>
+          <% end %>
         </div>
       </div>
     </div>
@@ -32,9 +34,7 @@
             <%= link_to "Projects", folios_path %>
           </li>
           <li>
-
             <%= link_to "Members", members_path %>
-
           </li>
         </ul>
       </div>

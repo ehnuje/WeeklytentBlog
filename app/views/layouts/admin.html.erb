@@ -19,7 +19,9 @@
       </button>
       <div class="text-center">
         <div id="nav-title">
-          <%= image_tag "logo.png", :class => "img-responsive aligncenter img-rounded" %>
+          <%= link_to admin_folios_path do %>
+            <%= image_tag "logo.png", :class => "img-responsive aligncenter img-rounded" %>
+          <% end %>
         </div>
       </div>
     </div>
