@@ -1,0 +1,43 @@
+<div class="container">
+
+  <!-- Page Header -->
+
+
+  <h1 class="pull-left">Members</h1>
+  <div class="pull-right" style="margin-top: 40px;">
+    <%= link_to "New", new_admin_member_path, class: "btn btn-default " %>
+  </div>
+  <div class="clearfix margin-bot-40"></div>
+
+  <!-- Projects Row -->
+  <div class="table-responsive">
+
+    <table class="table table-striped">
+      <tr>
+        <th>
+          Member name
+        </th>
+        <th>
+          Created At
+        </th>
+        <th>
+        </th>
+      </tr>
+      <% @members.each do |member| %>
+      <tr>
+          <td> <%= member.name %> </td>
+          <td> <%= member.created_at %> </td>
+          <td>
+            <%= link_to "Modify", edit_admin_member_path(member), class: "btn btn-default btn-xs" %>
+            <%= link_to "Delete", admin_member_path(member), method: :delete, data: { confirm: "Really?" }, class: "btn btn-danger btn-xs" %>
+          </td>
+
+      </tr>
+      <% end %>
+    </table>
+  </div>
+  <!-- /.row -->
+
+
+
+</div>

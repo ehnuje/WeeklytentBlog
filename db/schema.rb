@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102122038) do
+ActiveRecord::Schema.define(version: 20141123054303) do
 
   create_table "folios", force: true do |t|
     t.string   "title"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 20141102122038) do
     t.string   "figure_content_type"
     t.integer  "figure_file_size"
     t.datetime "figure_updated_at"
+  end
+
+  create_table "members", force: true do |t|
+    t.string   "name"
+    t.text     "introduction"
+    t.string   "email"
+    t.string   "blog"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
