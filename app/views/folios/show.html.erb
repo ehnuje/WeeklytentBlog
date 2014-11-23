@@ -8,8 +8,9 @@
     <div class="col-lg-12">
       <%= image_tag @folio.figure.url(:medium), :class => "img-responsive aligncenter img-rounded" %>
       <div id= "folio-content" class="col-lg-12">
-        <%= raw @folio.description %>
-
+        <div class="blog-content aligncenter">
+          <%= raw @folio.description %>
+        </div>
       </div>
     </div>
   </div>
