@@ -3,7 +3,7 @@ class Admin::MembersController < ApplicationController
     @members = Member.all
   end
 
-  def new 
+  def new
   	@member = Member.new
   end
 
@@ -40,6 +40,6 @@ class Admin::MembersController < ApplicationController
 
   private
     def member_params
-      params.require(:member).permit(:name, :introduction, :email, :image_url)
+      params.require(:member).permit(:name, :introduction, :email, :image_url, :profile_img)
     end
 end
