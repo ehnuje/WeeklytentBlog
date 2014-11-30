@@ -6,7 +6,9 @@
 
   <div class="row">
     <div id= "member-intro" class="col-lg-12">
-      <%= @member.introduction %>
+      <div class="blog-content aligncenter">
+        <%= raw  @member.introduction %>
+      </div>
     </div>
     <div id= "member-intro" class="col-lg-12">
       <%= @member.email %>
