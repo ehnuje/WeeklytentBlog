@@ -2,7 +2,7 @@
 <div class="member-container">
 
   <header class="profile-image-tabs row">
-    <div class="member-img col-sm-2">
+    <div class="member-img col-sm-3">
       <%= image_tag @member.profile_img.url(:medium), :class => "member-image-tag"%>
     </div>
     <div class="col-sm-2">
@@ -14,7 +14,7 @@
 
   <section class="profile-info-tabs">
     <div class="row">
-      <div class="col-sm-offset-2 col-sm-10">
+      <div class="col-sm-offset-3 col-sm-9">
         <%= raw  @member.introduction %>
         <br />
         <br />
