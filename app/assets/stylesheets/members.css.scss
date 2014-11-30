@@ -1,3 +1,50 @@
 // Place all the styles related to the members controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.member-container {
+	margin: 30px 10px 20px 10px;
+}
+
+.member-name {
+	margin-top: 50px;
+}
+.member-email {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+
+.member-intro {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+
+.member-img {
+	text-align: center;
+	margin: 0 auto;
+	z-index: 20;
+}
+
+.member-image-tag {
+	width: 150px;
+	height: 150px;
+	border: 10px solid white;
+}
+
+.profile-image-tabs {
+
+}
+
+.profile-info-tabs {
+	position: relative;
+	background: #f1f1f1;
+	margin-left: -20px;
+	margin-right: -20px;
+	padding: 20px;
+	margin-top: -20px;
+	margin-bottom: 30px;
+	z-index: 10;
+}

@@ -1,5 +1,4 @@
 class Admin::FoliosController < Admin::ApplicationController
-
   def index
     @folios = Folio.all
   end
