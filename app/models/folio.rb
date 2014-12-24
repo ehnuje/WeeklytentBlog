@@ -5,4 +5,7 @@ class Folio < ActiveRecord::Base
                     :storage => :dropbox,
                     :dropbox_credentials => Rails.root.join("config/dropbox.yml")
   validates_attachment_content_type :figure, :content_type => /\Aimage\/.*\Z/
+
+ scope :curation, -> {order(created_at: :desc)}
+
 end

@@ -1,6 +1,6 @@
 class FoliosController < ApplicationController
   def index
-    @folios = Folio.all
+    @folios = Folio.curation.all
   end
 
   def show
